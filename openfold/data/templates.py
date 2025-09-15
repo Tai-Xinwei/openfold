@@ -817,6 +817,8 @@ def _prefilter_hit(
 
 @functools.lru_cache(16, typed=False)
 def _read_file(path):
+    with open(path,"w") as f:
+        pass
     with open(path, 'r') as f:
         file_data = f.read()
 
